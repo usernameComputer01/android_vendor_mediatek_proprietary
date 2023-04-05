@@ -53,6 +53,16 @@ bool DrmTrustedApp::init() {
     TRUSTED_APP.push_back(String8("com.android.gallery3d:widgetservice"));//for gallery widget
     //Add your special process name here
 
+    // CyanogenMod
+    TRUSTED_APP.push_back(String8("org.cyanogenmod.snap"));
+    TRUSTED_APP.push_back(String8("org.cyanogenmod.filemanager"));
+
+    TRUSTED_APP.push_back(String8("com.android.wallpaper"));
+    TRUSTED_APP.push_back(String8("com.cyanogenmod.wallpaper"));
+    TRUSTED_APP.push_back(String8("org.cyanogenmod.wallpaperpicker"));
+
+    TRUSTED_APP.push_back(String8("com.cyanogenmod.eleven"));
+
     return true;
 }
 
@@ -96,6 +106,16 @@ bool DrmTrustedClient::init() {
     TRUSTED_PROC.push_back(String8("com.android.gallery3d:widgetservice"));//for gallery widget 
     //Add your special process name here
 
+    // CyanogenMod
+    TRUSTED_PROC.push_back(String8("org.cyanogenmod.snap"));
+    TRUSTED_PROC.push_back(String8("org.cyanogenmod.filemanager"));
+
+    TRUSTED_PROC.push_back(String8("com.android.wallpaper"));
+    TRUSTED_PROC.push_back(String8("com.cyanogenmod.wallpaper"));
+    TRUSTED_PROC.push_back(String8("org.cyanogenmod.wallpaperpicker"));
+
+    TRUSTED_PROC.push_back(String8("com.cyanogenmod.eleven"));
+
     return true;
 }
 
@@ -125,6 +145,10 @@ bool DrmTrustedVideoApp::init() {
     TRUSTED_VIDEO_APP.push_back(String8("com.mediatek.videoplayer2"));
     TRUSTED_VIDEO_APP.push_back(String8("com.mediatek.dataprotection"));
     //Add your special process name here
+
+    // CyanogenMod
+    TRUSTED_VIDEO_APP.push_back(String8("org.cyanogenmod.snap"));
+    TRUSTED_VIDEO_APP.push_back(String8("org.cyanogenmod.filemanager"));
 
     return true;
 }
@@ -172,6 +196,9 @@ bool CtaTrustedClient::initTrustedClient() {
     TRUSTED_PROC.push_back(String8("/system/bin/mediaserver"));
     //Add your special process name here
 
+    // CyanogenMod
+    TRUSTED_PROC.push_back(String8("com.cyanogenmod.eleven"));
+
     return true;
 }
 
@@ -186,6 +213,9 @@ bool CtaTrustedClient::initTrustedCheckTokenClient() {
     TRUSTED_CHECKTOKEN_PROC.push_back(String8("com.android.gallery3d"));
     TRUSTED_CHECKTOKEN_PROC.push_back(String8("com.android.music"));
     //Add your special process name here
+
+    // CyanogenMod
+    TRUSTED_CHECKTOKEN_PROC.push_back(String8("com.cyanogenmod.eleven"));
 
     return true;
 }

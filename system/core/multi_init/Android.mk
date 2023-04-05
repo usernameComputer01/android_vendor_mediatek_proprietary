@@ -54,6 +54,7 @@ LOCAL_SRC_FILES:= \
     $(SYSDIR)/ueventd.cpp \
     $(SYSDIR)/ueventd_parser.cpp \
     $(SYSDIR)/watchdogd.cpp \
+    $(SYSDIR)/vendor_init.cpp
 
 ifeq ($(strip $(MTK_NAND_UBIFS_SUPPORT)),yes)
 LOCAL_CFLAGS += -DMTK_UBIFS_SUPPORT
@@ -75,6 +76,8 @@ LOCAL_STATIC_LIBRARIES := \
     liblogwrap \
     libbase \
     libext4_utils_static \
+    libext2_blkid \
+    libext2_uuid_static \
     libcutils \
     libutils \
     liblog \
